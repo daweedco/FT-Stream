@@ -8,26 +8,26 @@
         <div class="container">
 
 <h1>eztv search</h1>
-	
+
 	<table>
 	<thead>
 
 	<% results_show.forEach(function(element){ %>
 		<tr>
-			
+
 			<td> Lien </td>
 			<td> Saison </td>
 			<td> Episode </td>
 
-			
+
 		</tr>
 <% }) %>
-	
+
 
 	<% episodes.forEach(function(element){ %>
 		<tr>
 
-			
+
 			<td><strong><a href='eztv_dl?id=<%= element.magnet.substring(0, 52) %>'> <%= element.title %> </a></strong></td>
 			<td> <%= element.seasonNumber %> </td>
 			<td> <%= element.episodeNumber %> </td>
@@ -39,37 +39,5 @@
 
         </div>
     </div>
- 
 
-<h1>eztv search</h1>
-	<form method = 'post'>
-	<input type = 'text' name = 'user[search]' placeholder = 'Search' required>
-	<input type = 'submit' value = 'OK'>
-	</form>
-	<table>
-	<thead>
 
-	<% results_show.forEach(function(element){ %>
-		<tr>
-			
-			<td> Lien </td>
-			<td> Saison </td>
-			<td> Episode </td>
-
-			
-		</tr>
-<% }) %>
-	
-
-	<% episodes.forEach(function(element){ %>
-		<tr>
-
-			
-			<td><strong><a href='eztv_dl?id=<%= element.magnet.substring(0, 52) %>'> <%= element.title %> </a></strong></td>
-			<td> <%= element.seasonNumber %> </td>
-			<td> <%= element.episodeNumber %> </td>
-		</tr>
-	<% }) %>
-
-	</tbody>
-	</table>

@@ -1,0 +1,38 @@
+
+<% include header %>
+<% include navbar %>
+
+
+
+<div class="jumbotron">
+        <div class="container">
+
+<h1>the piratebay search</h1>
+	
+	<table>
+	<thead>
+<tr>
+			
+			<td> Nom </td>
+			<td> Taille </td>
+
+		</tr>
+	<% results_movies.forEach(function(element){ %>
+		
+
+
+
+<tr>
+
+			<td><strong><a href='tpb_dl?id=<%= element.magnetLink.substring(0, 60) %>'> <%= element.name %> </a></strong></td>
+			<td> <%= element.size %> </td>
+		</tr>
+
+<% }) %>
+
+	</tbody>
+	</table>
+
+        </div>
+    </div>
+ 

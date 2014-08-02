@@ -1,0 +1,38 @@
+
+<% include header %>
+<% include navbar %>
+
+
+
+<div class="jumbotron">
+        <div class="container">
+
+<h1>eztv news</h1>
+	
+	<table>
+	<thead>
+
+			<td> <strong> Title </strong> </td>
+			<td> <strong> Published </strong> </td>
+	<% articles.forEach(function(element){ %>
+		<tr>
+			
+			
+			
+		</tr>
+		
+
+			<td> <%= element.title %> </td>
+	
+			<td> <%= element.published %> </td>
+
+		</tr>
+	<% }) %>
+
+	</tbody>
+	</table>
+
+        </div>
+    </div>
+ 
+
